@@ -13,9 +13,9 @@ if not exist "venv" (
 )
 call venv\Scripts\activate
 echo [%date% %time%] Installing dependencies...
-pip install -q -r requirements.txt
+venv\Scripts\pip install -q -r requirements.txt
 echo [%date% %time%] Starting worker...
-python worker.py
+venv\Scripts\python worker.py
 echo.
 echo [%date% %time%] Worker exited. Restarting in 3 seconds...
 timeout /t 3 /nobreak
